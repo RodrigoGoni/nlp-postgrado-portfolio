@@ -294,9 +294,9 @@ nlp-postgrado-portfolio/
 
 **Rodrigo Goñi**
 
-📧 Email: [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)  
+📧 Email: [safoce96@gmail.com] 
 🔗 GitHub: [@RodrigoGoni](https://github.com/RodrigoGoni)  
-💼 LinkedIn: [Tu perfil](https://linkedin.com/in/tu-perfil)
+💼 LinkedIn: [rodrigo-goni](https://www.linkedin.com/in/rodrigo-goni/)
 
 ---
 
