@@ -1,8 +1,8 @@
-# 📖 Guía de Instalación y Uso
+# Guía de Instalación y Uso
 
 Esta guía te ayudará a configurar el portfolio completo de desafíos de NLP.
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación Rápida](#instalación-rápida)
@@ -12,7 +12,7 @@ Esta guía te ayudará a configurar el portfolio completo de desafíos de NLP.
 
 ---
 
-## 🔧 Requisitos Previos
+## Requisitos Previos
 
 ### Software Necesario
 
@@ -54,35 +54,9 @@ Esta guía te ayudará a configurar el portfolio completo de desafíos de NLP.
 
 ---
 
-## ⚡ Instalación Rápida
+## Instalación Rápida
 
-### Opción 1: Script Automático (Linux/macOS)
-
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/nlp-postgrado-portfolio.git
-cd nlp-postgrado-portfolio
-
-# 2. Ejecutar el script de configuración
-chmod +x setup.sh
-./setup.sh
-
-# 3. Crear entorno virtual e instalar dependencias
-python -m venv venv
-source venv/bin/activate
-
-# Instalar todas las dependencias
-pip install -r desafio1-bag-of-words/requirements.txt
-pip install -r desafio2-custom-embeddings/requirements.txt
-pip install -r desafio3-chatbot/requirement.txt
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu  # O con CUDA
-pip install numpy matplotlib torchinfo
-
-# Descargar modelo de SpaCy
-python -m spacy download es_core_news_sm
-```
-
-### Opción 2: Manual con Git (Windows/Linux/macOS)
+### Manual con Git (Windows/Linux/macOS)
 
 ```bash
 # 1. Clonar con submódulos
@@ -95,18 +69,14 @@ git submodule update --init --recursive
 # 3. Crear entorno virtual
 python -m venv venv
 
-# Activar (Windows)
-venv\Scripts\activate
-
 # Activar (Linux/macOS)
 source venv/bin/activate
 
 # 4. Instalar dependencias (ver sección siguiente)
 ```
-
 ---
 
-## 🔨 Instalación Manual
+## Instalación Manual
 
 ### Paso 1: Clonar el Repositorio
 
@@ -133,10 +103,6 @@ git submodule update --init --recursive
 ```bash
 # Crear entorno
 python -m venv venv
-
-# Activar
-# Windows
-venv\Scripts\activate
 
 # Linux/macOS
 source venv/bin/activate
@@ -209,12 +175,12 @@ cd ..
 python --version
 
 # Verificar paquetes críticos
-python -c "import sklearn; import gensim; import tensorflow; import torch; print('✅ Todo OK')"
+python -c "import sklearn; import gensim; import tensorflow; import torch; print('Todo OK')"
 ```
 
 ---
 
-## 🚀 Uso de los Notebooks
+## Uso de los Notebooks
 
 ### Iniciar Jupyter Notebook
 
@@ -282,7 +248,7 @@ jupyter notebook traductor_simplificado.ipynb
 
 ---
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Problema: Submódulos vacíos
 
@@ -302,13 +268,6 @@ cd desafio3-chatbot
 git lfs pull
 ```
 
-### Problema: Falta modelo de SpaCy
-
-```bash
-# Error: Can't find model 'es_core_news_sm'
-python -m spacy download es_core_news_sm
-```
-
 ### Problema: PyTorch no encuentra CUDA
 
 ```bash
@@ -320,34 +279,19 @@ pip uninstall torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
-### Problema: Out of Memory (OOM) en notebooks
+### Problema: TensorFlow no detecta la GPU
 
-**Solución temporal**: Reducir batch size o tamaño de modelo en las celdas de configuración.
-
-```python
-# Ejemplo en el Desafío 4
-batch_size = 32  # Reducir a 16 o 8
-hidden_size = 128  # Reducir a 64
-```
-
-### Problema: NLTK data no encontrado
+Este es un problema común. TensorFlow requiere versiones específicas de CUDA y cuDNN.
 
 ```bash
-# Descargar datos NLTK
-python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt')"
+# Verificar si TensorFlow ve la GPU
+python -c "import tensorflow as tf; print('GPU disponible:', tf.config.list_physical_devices('GPU'))"
+
+# Verificar versión de TensorFlow
+python -c "import tensorflow as tf; print('TensorFlow version:', tf.__version__)"
 ```
 
-### Problema: Jupyter Kernel no inicia
-
-```bash
-# Reinstalar ipykernel
-pip install --upgrade ipykernel
-python -m ipykernel install --user --name=venv
-```
-
----
-
-## 📚 Recursos Adicionales
+## Recursos Adicionales
 
 ### Datasets
 
@@ -356,40 +300,3 @@ Los datasets se descargan automáticamente en los notebooks, pero también puede
 - **20 Newsgroups**: `sklearn.datasets.fetch_20newsgroups()`
 - **TensorFlow spa-eng**: http://storage.googleapis.com/download.tensorflow.org/data/spa-eng.zip
 - **GloVe Embeddings**: https://nlp.stanford.edu/projects/glove/
-
-### Documentación
-
-- [PyTorch Docs](https://pytorch.org/docs/stable/index.html)
-- [TensorFlow Docs](https://www.tensorflow.org/api_docs)
-- [Gensim Docs](https://radimrehurek.com/gensim/)
-- [SpaCy Docs](https://spacy.io/api)
-
----
-
-## 🆘 Soporte
-
-Si encuentras problemas:
-
-1. Revisa esta guía de solución de problemas
-2. Consulta el README de cada desafío individual
-3. Abre un issue en GitHub: https://github.com/TU_USUARIO/nlp-postgrado-portfolio/issues
-
----
-
-## ✅ Checklist de Instalación
-
-- [ ] Python 3.8+ instalado
-- [ ] Git instalado
-- [ ] Git LFS instalado y configurado
-- [ ] Repositorio clonado con submódulos
-- [ ] Entorno virtual creado y activado
-- [ ] Dependencias del Desafío 1 instaladas
-- [ ] Dependencias del Desafío 2 instaladas
-- [ ] Dependencias del Desafío 3 instaladas + modelo SpaCy
-- [ ] Dependencias del Desafío 4 instaladas (PyTorch)
-- [ ] Jupyter Notebook funcional
-- [ ] Notebooks se abren sin errores
-
----
-
-**¡Listo para explorar NLP! 🚀**
