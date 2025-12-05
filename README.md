@@ -1,5 +1,11 @@
 # Portfolio de Procesamiento de Lenguaje Natural
 
+<div align="center">
+
+![NLP Portfolio Banner](animations/portfolio_banner.gif)
+
+</div>
+
 > **Especialización en Procesamiento de Lenguaje Natural**  
 > Colección completa de desafíos prácticos implementando técnicas avanzadas de NLP con Deep Learning
 
@@ -31,7 +37,7 @@
 
 Este repositorio consolida los **cuatro desafíos principales** del programa de postgrado en **Procesamiento de Lenguaje Natural**, abarcando desde técnicas clásicas de vectorización hasta arquitecturas neuronales avanzadas como Seq2Seq con atención.
 
-Cada desafío está implementado como un **submódulo Git independiente**, permitiendo navegación modular mientras se mantiene un portfolio unificado para presentación académica y profesional.
+Cada desafío está implementado como un **submódulo Git independiente**, permitiendo navegación modular mientras se mantiene un portfolio unificado para presentación.
 
 ### Competencias Desarrolladas
 
@@ -79,6 +85,12 @@ Implementación completa de métodos tradicionales de vectorización y clasifica
 **Entrenamiento de embeddings personalizados con Word2Vec**
 
 **Repositorio**: [`customs_embeddings`](https://github.com/RodrigoGoni/customs_embeddings)
+
+<div align="center">
+
+![Word Embeddings](animations/word_embeddings.gif)
+
+</div>
 
 #### Descripción
 Creación de vectores de embeddings desde cero utilizando **Gensim** sobre datasets personalizados: letras de canciones de diversos artistas y textos religiosos (Evangelio de Juan).
@@ -175,8 +187,8 @@ Sistema de traducción neuronal basado en **LSTM bidireccionales** con arquitect
 #### Resultados
 | Modelo | Parámetros Entrenables | Convergencia |
 |--------|----------------------|--------------|
-| LSTM-128 | ~4.9M | Early stopping aplicado |
-| LSTM-256 | ~4.9M | Mayor capacidad representacional |
+| LSTM-128 | ~4.9M | 50 ep |
+| LSTM-256 | ~4.9M | E-S |
 
 #### Stack Tecnológico
 `PyTorch` · `torchinfo` · `NumPy` · `Matplotlib` · `GloVe Embeddings`
@@ -203,22 +215,13 @@ Sistema de traducción neuronal basado en **LSTM bidireccionales** con arquitect
 - **Jupyter Notebook** / **VS Code**
 - **Git LFS** (gestión de archivos grandes)
 - **BeautifulSoup** (web scraping)
+- **Git Copilot** (asistencia de código)
 
 ---
 
 ## Instalación
 
 **Consulta la [Guía de Instalación Completa](INSTALL.md)** para instrucciones detalladas.
-
-**Instalación rápida:**
-```bash
-git clone --recurse-submodules https://github.com/RodrigoGoni/nlp-postgrado-portfolio.git
-cd nlp-postgrado-portfolio
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
-
----
 
 ## Estructura del Proyecto
 
@@ -258,14 +261,20 @@ nlp-postgrado-portfolio/
 
 ## Resultados Destacados
 
+<div align="center">
+
+![Training Progress](animations/training_progress.gif)
+
+</div>
+
 ### Progresión de Complejidad
 
-| Desafío | Técnica | Nivel | Resultado Clave |
-|---------|---------|-------|-----------------|
-| 1 | Bag of Words + TF-IDF | Básico | F1=0.695 (ComplementNB) |
-| 2 | Word2Vec (Gensim) | Intermedio | Embeddings personalizados coherentes |
-| 3 | LSTM a nivel de carácter | Avanzado | Perplexity=3.51, generación coherente |
-| 4 | Seq2Seq con GloVe | Experto | Traducción EN→ES con ~4.9M params |
+| Desafío | Técnica | Resultado Clave |
+|---------|---------|-----------------|
+| 1 | Bag of Words + TF-IDF | F1=0.695 (ComplementNB) |
+| 2 | Word2Vec (Gensim) | Embeddings personalizados coherentes |
+| 3 | LSTM a nivel de carácter | Perplexity=3.51, generación coherente |
+| 4 | Seq2Seq con GloVe | Traducción EN→ES con ~4.9M params |
 
 ---
 
