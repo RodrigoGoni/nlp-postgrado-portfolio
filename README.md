@@ -35,6 +35,12 @@
 
 ## Descripción General
 
+<div align="center">
+
+![Neural Network](animations/neural_network.gif)
+
+</div>
+
 Este repositorio consolida los **cuatro desafíos principales** del programa de postgrado en **Procesamiento de Lenguaje Natural**, abarcando desde técnicas clásicas de vectorización hasta arquitecturas neuronales avanzadas como Seq2Seq con atención.
 
 Cada desafío está implementado como un **submódulo Git independiente**, permitiendo navegación modular mientras se mantiene un portfolio unificado para presentación.
@@ -117,6 +123,12 @@ Creación de vectores de embeddings desde cero utilizando **Gensim** sobre datas
 **Generación de texto con redes recurrentes a nivel de carácter**
 
 **Repositorio**: [`chatbot`](https://github.com/RodrigoGoni/chatbot)
+
+<div align="center">
+
+![Text Generation](animations/text_generation.gif)
+
+</div>
 
 #### Descripción
 Implementación de modelos de lenguaje basados en RNNs para **generación de texto en español** a nivel de carácter, entrenados sobre un corpus de literatura clásica española del Proyecto Gutenberg (~7.5M caracteres de 8 libros).
