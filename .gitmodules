@@ -1,0 +1,12 @@
+[submodule "desafio1-bag-of-words"]
+	path = desafio1-bag-of-words
+	url = https://github.com/RodrigoGoni/bag-of-words-npl.git
+[submodule "desafio2-custom-embeddings"]
+	path = desafio2-custom-embeddings
+	url = https://github.com/RodrigoGoni/customs_embeddings.git
+[submodule "desafio3-chatbot"]
+	path = desafio3-chatbot
+	url = https://github.com/RodrigoGoni/chatbot.git
+[submodule "desafio4-seq2seq-translator"]
+	path = desafio4-seq2seq-translator
+	url = https://github.com/RodrigoGoni/seq2seq-translator.git
